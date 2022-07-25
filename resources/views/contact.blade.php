@@ -4,7 +4,7 @@
 @section('title', 'Contact')
 
 @section('content')
-    <h1>Contact</h1>
+    <h1>{{ __('Contact')}}</h1>
     
     <form method="POST" action="{{ route('contact')  }}">
         @csrf
@@ -21,6 +21,6 @@
         {!! $errors->first('content','<small>:message</small><br>')!!}
 
         
-        <button>Enviar</button>
+        <button>@lang('Send')</button>
     </form>
 @endsection
